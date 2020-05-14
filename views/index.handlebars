@@ -1,0 +1,34 @@
+<div class="row">
+  <div class="col-6">
+    <h3 class="h3">Served Burgers!</h3>
+    <ul>
+      {{#each burgers}}
+      {{#if devour}}
+      {{> burgers/burger-block dev=false}}  
+      {{/if}}
+      {{/each}}
+    </ul>
+  </div>
+  <div class="col-6">
+    <h3 class="h3">Devoured Burgers!</h3>
+    <ul>
+      {{#each burgers}}
+      {{#unless devour}}
+      {{> burgers/burger-block dev=true}}
+      {{/unless}}
+      {{/each}}
+    </ul>
+  </div>
+</div>
+<div class="row" style="margin-bottom: 20px;">
+  <div class="col-12" style="text-align: center;">
+    <h3 class="h3 glow">Create a Burger</h3>
+    <form id="create-form">
+      <div class="form-group">
+        <label for="burgername" style="color: white; display: block; font-style: italic;">Burger Name:</label>
+        <input type="text" id="burgername" name="name" style="display: block, text-align: center;">
+      </div>
+      <button class="addburger" type="submit">Create!</button>
+    </form>
+  </div>
+</div>

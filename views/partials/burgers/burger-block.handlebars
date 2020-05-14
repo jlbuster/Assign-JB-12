@@ -1,0 +1,14 @@
+{{#unless dev}}
+	<li>
+    	{{name}}
+    
+    	<button class="change-devoured" data-id="{{id}}" data-devoured="{{dev}}" style="float: right; margin-top:-3px;">Devour</button>
+    
+	</li>
+{{/unless}}
+
+{{#if dev}}
+	<li>
+    	<span>{{name}}</span>
+	</li>
+{{/if}}

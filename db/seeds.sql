@@ -1,5 +1,5 @@
 USE burgers_db;
 
-INSERT INTO burgers (burger_name, devoured) VALUES ("Plain Burger", false);
-INSERT INTO burgers (burger_name, devoured) VALUES ("Burger Cheese", false);
-INSERT INTO burgers (burger_name, devoured) VALUES ("Burger Bacon", true);
+INSERT INTO burgers (`name`, `devour`) VALUES ('Plain Burger', true);
+INSERT INTO burgers (`name`, `devour`) VALUES ('Burger Cheese', true);
+INSERT INTO burgers (`name`, `devour`) VALUES ('Burger Bacon', true);
