@@ -1,7 +1,7 @@
 const connection = require('./connection')
 
 const orm = {
-//three methods that will execute the sql commands in the controllers
+//four methods that will execute the sql commands in the controllers
     selectAll: async function () {
         const [rows] = await connection.query('SELECT * FROM burgers;')
         return rows
