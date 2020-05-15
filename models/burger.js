@@ -13,6 +13,17 @@ class Burger {
         return rows
     }
 
+    static async findById (id) {
+        const rows = await orm.selectId(id)
+    
+        let burger = null
+        if (rows.length) {
+          burger = new Burger(rows[0])
+          burger.id = id
+        }
+        return burger
+      }
+
     async create () {
         const rows = await orm.insertOne(this.name, this.devour)
         this.id = rows.insertId

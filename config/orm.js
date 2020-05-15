@@ -7,6 +7,14 @@ const orm = {
         return rows
     },
 
+    selectId: async function (id) {
+        const [rows] = await connection.query('SELECT * FROM burgers WHERE id = ?;', [
+            parseInt(id)
+        ])
+    
+        return rows
+    },
+
     insertOne: async function (name1, devour1) {
         const [rows] = await connection.query('INSERT INTO burgers (name, devour) VALUES (?, ?)', 
         [name1, devour1]

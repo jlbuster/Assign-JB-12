@@ -9,7 +9,6 @@ document.querySelectorAll('.change-devoured').forEach(button => {
         body: JSON.stringify({ devour: newdevoured })
       }).then(response => {
         if (response.ok) location.reload()
-        console.log(response)
       })
     })
   })
@@ -28,7 +27,6 @@ document.querySelectorAll('.change-devoured').forEach(button => {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(newBurger)
     }).then(response => {
-      console.log(response)
       if (response.ok) location.reload()
     })
   })
