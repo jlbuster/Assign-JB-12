@@ -2,6 +2,14 @@
 
 # Node Express Handlebars
 
+## Link To Deployed Application
+
+https://shrouded-peak-51161.herokuapp.com/
+
+## Link to Portfolio with added Assignment
+
+https://jlbuster.github.io/Assign-07-JB/
+
 ## Description
 
 This application can be used to make and devour burgers using node, express, SQL, and handlebars. The user can create new burgers and then choose if they want to devour them or not. 
@@ -30,10 +38,4 @@ No tests
 ## Gif of Working Application
 
 ![](/gifs/burger_gif.gif)
-
-## Link to working application (Heroku)
-
-
-
-## Link to Portfolio with added Assignment
 
