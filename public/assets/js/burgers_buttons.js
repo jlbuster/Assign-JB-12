@@ -1,8 +1,10 @@
+//Writing code to for the buttons to devour the burgers (to move them to the devoured side)
 document.querySelectorAll('.change-devoured').forEach(button => {
     button.addEventListener('click', function (event) {
       const id = this.getAttribute('data-id')
       const newdevoured = this.getAttribute('data-devoured')
   
+      //Patch request to change the devour value of a burger to newdevoured.
       fetch(`/api/burgers/${id}`, {
         method: 'PATCH',
         headers: { 'Content-Type': 'application/json' },
@@ -21,6 +23,7 @@ document.querySelectorAll('.change-devoured').forEach(button => {
       devour: true
     }
   
+    //Post request to add burgers to the db
     fetch(`/api/burgers`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
